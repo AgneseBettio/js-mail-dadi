@@ -6,15 +6,14 @@ var richiestaEmail = prompt("inserisci il tuo indirizzo email per accedere all'a
 console.log(richiestaEmail);
 var emailAutorizzate = ["studente01@boolean.it", "studente04@boolean.it", "studente12@boolean.it", "studente21@boolean.it", "studente22@boolean.it", "studente32@boolean.it"];
 console.log(emailAutorizzate);
-
+var autorizzazioneAccesso= false;
 
 if(richiestaEmail === emailAutorizzate){
-    var accessoAutorizzato;
-    console.log("l'utente" + richiestaEmail +"è autorizzato  ad accedere all'area riservata");
+    autorizzazioneAccesso = true;
+    console.log("l'utente " + richiestaEmail +" è autorizzato  ad accedere all'area riservata");
+    document.getElementById("success").innerHTML = "benvenuto nell'area riservata";
 } 
 
-
-
-// else{
-//     alert("l'utente" + richiestaEmail +"non è autorizzato ad accedere all'area riservata");
-// }
+if(!autorizzazioneAccesso){
+     alert("l'utente " + richiestaEmail +" non è autorizzato ad accedere all'area riservata");
+}
