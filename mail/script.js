@@ -9,7 +9,7 @@ console.log(emailAutorizzate);
 var autorizzazioneAccesso= false;
 
 for(var i = 0; i < emailAutorizzate.length; i++) {
-    console.log(emailAutorizzate[i]);
+    // console.log(emailAutorizzate[i]);
     if(richiestaEmail === emailAutorizzate[i]){
         autorizzazioneAccesso = true;
         console.log("l'utente " + richiestaEmail +" è autorizzato  ad accedere all'area riservata");
