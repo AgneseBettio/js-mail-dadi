@@ -8,11 +8,14 @@ var emailAutorizzate = ["studente01@boolean.it", "studente04@boolean.it", "stude
 console.log(emailAutorizzate);
 var autorizzazioneAccesso= false;
 
-if(richiestaEmail === emailAutorizzate){
-    autorizzazioneAccesso = true;
-    console.log("l'utente " + richiestaEmail +" è autorizzato  ad accedere all'area riservata");
-    document.getElementById("success").innerHTML = "benvenuto nell'area riservata";
-} 
+for(var i = 0; i < emailAutorizzate.length; i++) {
+    console.log(emailAutorizzate[i]);
+    if(richiestaEmail === emailAutorizzate[i]){
+        autorizzazioneAccesso = true;
+        console.log("l'utente " + richiestaEmail +" è autorizzato  ad accedere all'area riservata");
+        document.getElementById("success").innerHTML = "benvenuto nell'area riservata";
+    } 
+}
 
 if(!autorizzazioneAccesso){
      alert("l'utente " + richiestaEmail +" non è autorizzato ad accedere all'area riservata");
